@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://daifnykmvega2"]
+[gd_scene load_steps=4 format=3 uid="uid://dt1qown7jeisf"]
 
 [ext_resource type="Script" path="res://Scripts/flecha.gd" id="1_f423h"]
 [ext_resource type="Texture2D" uid="uid://b5jqq7g46er0u" path="res://Assets/Prueba/enemy.png" id="2_mkkyf"]

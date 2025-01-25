@@ -4,19 +4,23 @@ var next_spawn = randf_range(5.0, 10.0)
 var time_pass = 0.0
 var position_random = 0.0
 
-const X_POSITION1 = -500.0
+const X_POSITION1 = -200.0
 const X_POSITION2 = 1890.0
 var y_position : Array = [450.0, 200.0, 85.0, 570.0, 800.0]
 
-func generateFlecha(v : Vector2):
+func generateFlecha(v : Vector2, direction):
 	var flecha = load("res://Scenes/flecha.tscn")
 	var flecha_instance = flecha.instantiate()
 	add_child(flecha_instance)
 	flecha_instance.position = v
+	flecha_instance.setDirection(direction)
 	
-func generateYPosition(x_position):
+func generateYPosition(x_position, direction):
+	print("generando posición")
 	position_random = randf_range(-20.0, 900.0)
-	generateFlecha(Vector2(x_position, position_random))
+	print(x_position)
+	print(position_random)
+	generateFlecha(Vector2(x_position, position_random), direction)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,9 +33,9 @@ func _process(delta: float) -> void:
 	if((next_spawn - time_pass) < 0.0):
 		time_pass = 0.0
 		next_spawn = randf_range(5.0, 10.0)
-		generateYPosition(X_POSITION1)
-		generateYPosition(X_POSITION1)
-		#generateYPosition(X_POSITION2)
-		#generateYPosition(X_POSITION2)
+		generateYPosition(X_POSITION1, false)
+		generateYPosition(X_POSITION1, false)
+		generateYPosition(X_POSITION2, true)
+		generateYPosition(X_POSITION2, true)
 		
 	pass

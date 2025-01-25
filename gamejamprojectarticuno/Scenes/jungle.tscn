@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dn3hac6mn2n6e"]
+[gd_scene load_steps=6 format=3 uid="uid://dn3hac6mn2n6e"]
 
 [ext_resource type="Script" path="res://Scripts/jungle.gd" id="1_ok2hr"]
 [ext_resource type="Texture2D" uid="uid://d0c0becbvs46" path="res://Assets/Backgrounds/Mapa jungla.png" id="1_vhyym"]
 [ext_resource type="Texture2D" uid="uid://drdekfexyxldh" path="res://Assets/Prueba/base.png" id="2_70eny"]
-[ext_resource type="PackedScene" uid="uid://c2317i65e0v68" path="res://Scenes/Bubble.tscn" id="3_a60js"]
-[ext_resource type="PackedScene" uid="uid://daifnykmvega2" path="res://Scenes/flecha.tscn" id="4_058in"]
+[ext_resource type="PackedScene" path="res://Scenes/Bubble.tscn" id="3_a60js"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y04yq"]
 size = Vector2(180, 24)
@@ -55,7 +54,3 @@ texture = ExtResource("2_70eny")
 [node name="Burbuja" parent="." instance=ExtResource("3_a60js")]
 position = Vector2(1317.75, 680.5)
 scale = Vector2(0.6, 0.6)
-
-[node name="Flecha" parent="." instance=ExtResource("4_058in")]
-position = Vector2(-253, 178)
-scale = Vector2(0.4, 0.4)
