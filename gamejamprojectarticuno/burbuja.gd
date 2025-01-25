@@ -4,7 +4,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-var anim_actual = "idle" # animacion actual: parado
+var anim_actual = "idle" # variable de animacion cuando esta quieta la burbuja declarada
 
 
 func _process(delta: float) -> void:
@@ -14,26 +14,26 @@ func _process(delta: float) -> void:
 
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor(): # si estoy en el suelo y pulso saltar
-		velocity.y = JUMP_VELOCITY # saltar
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor(): 
+		velocity.y = JUMP_VELOCITY 
 
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right") # recoger el input a izquierda y derecha
-	if direction: # Si hay input
+	var direction := Input.get_axis("ui_left", "ui_right") # cuando se mueve de izquierda a derecha
+	if direction: 
 		velocity.x = direction * SPEED # movereme en la dirección a la velocidad
-		#cambiar_animacion("animacion preparada para poner")
+		
 		if velocity.x < 0:
-			$Sprite2D.flip_h = true # si la velocidad es negativa voy a la izquierda y por tanto volteo el sprite
+			$Sprite2D.flip_h = true # animacion que voltea el sprite
 		else:
 			$Sprite2D.flip_h = false
 	else:
-		velocity.x = 0 # si no hay input me paro
+		velocity.x = 0 # animacion de parada
 		cambiar_animacion("idle")
 
 
-	move_and_slide() # moverse y colisionar
+	move_and_slide() 
 	
 
 # funcion para cambiar de animacion
