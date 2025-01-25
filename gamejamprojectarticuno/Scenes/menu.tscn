@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cpiy3yaroyvu2"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_0t03q"]
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_0t03q"]
 [ext_resource type="Texture2D" uid="uid://g7ds11do33qh" path="res://Assets/Sprites/Pompa.png" id="1_qj2ld"]
 [ext_resource type="PackedScene" uid="uid://bosxs58l0kwmg" path="res://Scenes/parallax_background.tscn" id="2_f587w"]
 
