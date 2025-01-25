@@ -17,9 +17,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor(): 
 		velocity.y = JUMP_VELOCITY 
 
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction_x := Input.get_axis("ui_left", "ui_right") # cuando se mueve de izquierda a derecha
 	if direction_x: 
 		velocity.x = direction_x * SPEED # movereme en la dirección a la velocidad
