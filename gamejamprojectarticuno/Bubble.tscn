@@ -1,22 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://dueavd47aj22i"]
 
-[ext_resource type="Script" path="res://burbuja.gd" id="1_jowhl"]
-[ext_resource type="Texture2D" uid="uid://dgrfa22ybg6kk" path="res://Assets/Prueba/bubble.png" id="2_ab665"]
+[ext_resource type="Script" path="res://bubble.gd" id="1_786sw"]
+[ext_resource type="Texture2D" uid="uid://g7ds11do33qh" path="res://Assets/Sprites/Pompa.png" id="2_vn6a2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ge44s"]
-size = Vector2(138, 133)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vp5hk"]
+size = Vector2(107, 146)
 
-[node name="Node2D" type="Node2D"]
-
-[node name="Burbuja" type="CharacterBody2D" parent="."]
+[node name="Burbuja" type="CharacterBody2D"]
 position = Vector2(587, 298)
-script = ExtResource("1_jowhl")
+script = ExtResource("1_786sw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Burbuja"]
-position = Vector2(-149, -6.5)
-shape = SubResource("RectangleShape2D_ge44s")
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-145.5, -6)
+shape = SubResource("RectangleShape2D_vp5hk")
 
-[node name="Sprite2D" type="Sprite2D" parent="Burbuja"]
+[node name="Sprite2D3" type="Sprite2D" parent="."]
 position = Vector2(-146, -6)
 scale = Vector2(0.146667, 0.141667)
-texture = ExtResource("2_ab665")
+texture = ExtResource("2_vn6a2")
