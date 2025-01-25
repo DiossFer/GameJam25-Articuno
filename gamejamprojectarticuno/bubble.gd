@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 	var direction_x := Input.get_axis("ui_left", "ui_right") # cuando se mueve de izquierda a derecha
 	if direction_x: 
 		velocity.x = direction_x * SPEED # movereme en la dirección a la velocidad
+		cambiar_animacion("burbuja_movimiento")
 		
 		if velocity.x < 0:
 			$Sprite2D3.flip_h = true # animacion que voltea el sprite
@@ -33,9 +34,9 @@ func _process(delta: float) -> void:
 		cambiar_animacion("idle")
 		
 	#salto en el aire comentado
-	#var direction_y := Input.get_axis("ui_up", "ui_down")
-	#if direction_y:
-		#velocity.y = direction_y * SPEED
+	var direction_y := Input.get_axis("ui_up", "ui_down")
+	if direction_y:
+		velocity.y = direction_y * SPEED
 	
 
 	move_and_slide() 
@@ -44,11 +45,8 @@ func _process(delta: float) -> void:
 # funcion para cambiar de animacion
 func cambiar_animacion(nombre_anim):
 	if nombre_anim != anim_actual:
-		##$Sprite2D/AnimationPlayer.play(animacion a implementar)
+		$Sprite2D3/AnimationPlayer.play(nombre_anim)
 		anim_actual = nombre_anim
 		
-
-func _on_body_entered(body: Node2D) -> void:
-	pass
 	
 	
