@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpiy3yaroyvu2"]
+[gd_scene load_steps=4 format=3 uid="uid://cpiy3yaroyvu2"]
 
+[ext_resource type="Script" path="res://menu.gd" id="1_0t03q"]
 [ext_resource type="Texture2D" uid="uid://g7ds11do33qh" path="res://Assets/Sprites/Pompa.png" id="1_qj2ld"]
-[ext_resource type="PackedScene" uid="uid://ba7ibhe6ikme" path="res://Scenes/parallax_background.tscn" id="2_f587w"]
+[ext_resource type="PackedScene" uid="uid://bosxs58l0kwmg" path="res://Scenes/parallax_background.tscn" id="2_f587w"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0t03q")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -46,11 +48,11 @@ text = "Controls"
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="rightBLevel2" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="leftBLevel" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "<"
 
-[node name="Ice Age" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="mapa" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Ice Age
 "
@@ -63,7 +65,7 @@ text = ">"
 layout_mode = 2
 size_flags_horizontal = 10
 
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/VBoxContainer2"]
+[node name="CharacterSkin" type="Sprite2D" parent="HBoxContainer/VBoxContainer2"]
 position = Vector2(53.5, 55)
 scale = Vector2(0.211, 0.22)
 texture = ExtResource("1_qj2ld")
@@ -86,3 +88,11 @@ layout_mode = 2
 text = ">"
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_f587w")]
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/leftBLevel" to="." method="_on_left_b_level_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/rightBLevel" to="." method="_on_right_b_level_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/HBoxContainer/leftBSkin" to="." method="_on_left_b_skin_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/HBoxContainer/rightBSkin" to="." method="_on_right_b_skin_pressed"]
