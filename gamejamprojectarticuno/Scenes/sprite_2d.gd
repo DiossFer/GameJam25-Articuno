@@ -9,9 +9,4 @@ func _ready() -> void:
 		
 		visible = true  # Objeto visible
 		await get_tree().create_timer(3.0).timeout  # Durante estos segundos el tiempo está visible
-	 # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	 
