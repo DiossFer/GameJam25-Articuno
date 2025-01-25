@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dueavd47aj22i"]
+
+[ext_resource type="Script" path="res://bubble.gd" id="1_786sw"]
+[ext_resource type="Texture2D" uid="uid://g7ds11do33qh" path="res://Assets/Sprites/Pompa.png" id="2_vn6a2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vp5hk"]
+size = Vector2(107, 146)
+
+[node name="Burbuja" type="CharacterBody2D"]
+position = Vector2(587, 298)
+script = ExtResource("1_786sw")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-145.5, -6)
+shape = SubResource("RectangleShape2D_vp5hk")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(-146, -6)
+scale = Vector2(0.146667, 0.141667)
+texture = ExtResource("2_vn6a2")
