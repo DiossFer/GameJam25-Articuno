@@ -8,14 +8,14 @@ var down = false #variable para indicar la dirección de la flecha, indica que v
 func _ready() -> void:
 	#detecto la dirección a la que va a ir la flecha
 	if(position.y <= 0):
-		print("Voy hacia arriba")
+		print("Voy hacia abajo")
 		print(position.y)
-		up = true
+		down = true
 		gravity *= -1
 		
 	else:
-		print("Voy hacia abajo")
-		down = true
+		print("Voy hacia arriba")
+		up = true
 		gravity *= 1
 		#Darle la vuelta al sprite si va en dirección contraria
 		$Sprite2D.flip_h = true
@@ -25,11 +25,24 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if(down):
 		position.y += 1 * SPEED
+		if(position.y >= 624):
+			print("me destruyo")
+			queue_free()
+		else:
+			pass
 	else:
 		position.y -= 1 * SPEED
+		if(position.y <= -122):
+			print("me destruyo")
+			queue_free()
+		else:
+			pass
+		
 	
 	#move_and_slide()
 
 # Called when the arrow leave the camera
 func _on_body_entered(body: Node2D) -> void:
+	print("chocolate")
+	#queue_free()
 	pass
