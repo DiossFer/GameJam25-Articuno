@@ -1,20 +1,83 @@
-[gd_scene load_steps=4 format=3 uid="uid://dueavd47aj22i"]
+[gd_scene load_steps=10 format=3 uid="uid://dueavd47aj22i"]
 
 [ext_resource type="Script" path="res://bubble.gd" id="1_786sw"]
-[ext_resource type="Texture2D" uid="uid://g7ds11do33qh" path="res://Assets/Sprites/Pompa.png" id="2_vn6a2"]
+[ext_resource type="Texture2D" uid="uid://dugalik005hu5" path="res://Assets/Sprites/Pompa mov (1).png" id="2_j5wwd"]
+
+[sub_resource type="Animation" id="Animation_pabmb"]
+resource_name = "burbuja_movimiento"
+length = 0.2
+loop_mode = 1
+
+[sub_resource type="Animation" id="Animation_guh7e"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 5]
+}
+
+[sub_resource type="Animation" id="Animation_cxfaw"]
+resource_name = "burbuja_movimiento1"
+loop_mode = 1
+step = 0.4
+
+[sub_resource type="Animation" id="Animation_boklt"]
+resource_name = "burbuja_movimiento2"
+loop_mode = 1
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_lle4h"]
+resource_name = "burbuja_movimiento4"
+loop_mode = 1
+step = 0.099
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099, 0.198, 0.297, 0.396, 0.495, 0.594),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_clm2t"]
+_data = {
+"RESET": SubResource("Animation_guh7e"),
+"burbuja_movimiento": SubResource("Animation_pabmb"),
+"burbuja_movimiento1": SubResource("Animation_cxfaw"),
+"burbuja_movimiento2": SubResource("Animation_boklt"),
+"burbuja_movimiento4": SubResource("Animation_lle4h")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vp5hk"]
-size = Vector2(107, 146)
+size = Vector2(107, 138)
 
 [node name="Burbuja" type="CharacterBody2D"]
-position = Vector2(587, 298)
+position = Vector2(554, 384)
 script = ExtResource("1_786sw")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(-146, -6)
+position = Vector2(8, -185)
 scale = Vector2(0.146667, 0.141667)
-texture = ExtResource("2_vn6a2")
+texture = ExtResource("2_j5wwd")
+hframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D3"]
+libraries = {
+"": SubResource("AnimationLibrary_clm2t")
+}
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(-145.5, -6)
+position = Vector2(5, -185)
 shape = SubResource("RectangleShape2D_vp5hk")

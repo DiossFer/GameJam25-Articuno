@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvn5nyfajkvo7"]
+
+[ext_resource type="Texture2D" uid="uid://d3urycsq5f10c" path="res://Assets/Prueba/danger-symbol-triangle-on-transparent-260nw-1335676049.webp" id="2_ubmkf"]
+[ext_resource type="Script" path="res://Scenes/sprite_2d.gd" id="2_wl8eo"]
+
+[node name="AvisoZarpazo" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(100, 327)
+scale = Vector2(0.773077, 2.33214)
+texture = ExtResource("2_ubmkf")
+script = ExtResource("2_wl8eo")
+
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]

@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpiy3yaroyvu2"]
+[gd_scene load_steps=3 format=3 uid="uid://gfmhe305kr7o"]
 
 [ext_resource type="Texture2D" uid="uid://g7ds11do33qh" path="res://Assets/Sprites/Pompa.png" id="1_qj2ld"]
-[ext_resource type="PackedScene" uid="uid://ba7ibhe6ikme" path="res://Scenes/parallax_background.tscn" id="2_f587w"]
+[ext_resource type="PackedScene" uid="uid://bosxs58l0kwmg" path="res://Scenes/parallax_background.tscn" id="2_f587w"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
