@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=10 format=3 uid="uid://dueavd47aj22i"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://c3jfdhtmffc7y"]
+>>>>>>> 84869dd9c51945a6162a5371c2369a9b026bec09
 
 [ext_resource type="Script" path="res://bubble.gd" id="1_786sw"]
 [ext_resource type="Texture2D" uid="uid://dugalik005hu5" path="res://Assets/Sprites/Pompa mov (1).png" id="2_j5wwd"]

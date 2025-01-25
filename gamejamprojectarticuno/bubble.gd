@@ -47,3 +47,9 @@ func cambiar_animacion(nombre_anim):
 	if nombre_anim != anim_actual:
 		$Sprite2D3/AnimationPlayer.play(nombre_anim)
 		anim_actual = nombre_anim
+		
+
+func _on_body_entered(body: Node2D) -> void:
+	pass
+	
+	
