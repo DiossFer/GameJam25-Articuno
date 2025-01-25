@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpiy3yaroyvu2"]
+
+[ext_resource type="Texture2D" uid="uid://g7ds11do33qh" path="res://Assets/Sprites/Pompa.png" id="1_qj2ld"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.0
+offset_top = -108.0
+offset_right = 197.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Play" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="Level 1" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Level 1
+"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/VBoxContainer2"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_qj2ld")
+
+[node name="Personalizar" type="Button" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Personalizar
+"
