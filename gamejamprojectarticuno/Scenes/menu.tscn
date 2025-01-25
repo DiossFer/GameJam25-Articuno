@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpiy3yaroyvu2"]
+[gd_scene load_steps=3 format=3 uid="uid://cpiy3yaroyvu2"]
 
 [ext_resource type="Texture2D" uid="uid://g7ds11do33qh" path="res://Assets/Sprites/Pompa.png" id="1_qj2ld"]
+[ext_resource type="PackedScene" uid="uid://ba7ibhe6ikme" path="res://Scenes/parallax_background.tscn" id="2_f587w"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -32,6 +33,14 @@ size_flags_horizontal = 2
 layout_mode = 2
 text = "Play"
 
+[node name="Options" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="Controls" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Controls"
+
 [node name="Level 1" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Level 1
@@ -42,7 +51,8 @@ layout_mode = 2
 size_flags_horizontal = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/VBoxContainer2"]
-scale = Vector2(0.1, 0.1)
+position = Vector2(30.45, 38.5)
+scale = Vector2(0.182075, 0.171296)
 texture = ExtResource("1_qj2ld")
 
 [node name="Personalizar" type="Button" parent="HBoxContainer/VBoxContainer2"]
@@ -50,3 +60,5 @@ layout_mode = 2
 size_flags_vertical = 10
 text = "Personalizar
 "
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_f587w")]
