@@ -11,10 +11,10 @@ func setDirection(direction):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("me CREO")
+	#print("me CREO")
 	#detecto la dirección a la que va a ir la flecha
 	if(position.x <= 0):
-		print("comprobando hacia donde voy")
+		#print("comprobando hacia donde voy")
 		left = false
 		#gravity *= -1
 		
@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 		#print("voy hacia la derecha")
 		position.x += 1 * SPEED
 		if(position.x >= 2000):
-			print("me destruyo")
+			#print("me destruyo")
 			queue_free()
 		else:
 			pass
@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 		#print("voy hacia la izquierda")
 		position.x -= 1 * SPEED
 		if(position.x <= -900.0):
-			print("me destruyo")
+			#print("me destruyo")
 			queue_free()
 		else:
 			pass
@@ -49,6 +49,6 @@ func _process(delta: float) -> void:
 
 # Called when the arrow leave the camera
 func _on_body_entered(body: Node2D) -> void:
-	print("chocolate")
+	#print("chocolate")
 	#queue_free()
 	pass
