@@ -5,10 +5,10 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(14, 5)
+position = Vector2(12, 7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(14, 7)
+position = Vector2(15, 9)
 shape = SubResource("RectangleShape2D_ge44s")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
