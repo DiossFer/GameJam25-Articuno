@@ -1,42 +1,33 @@
 extends Area2D
 
-const SPEED = 5.0 #constante que indica la velocidad de la flecha
-var up = false #variable para indicar la dirección de la flecha, indica que va hacia arriba
-var down = false #variable para indicar la dirección de la flecha, indica que va hacia abajo
+const SPEED = 120.0  # Constante que indica la velocidad de la flecha
+var up = false  # Variable para indicar la dirección de la flecha, indica que va hacia arriba
+var down = false  # Variable para indicar la dirección de la flecha, indica que va hacia abajo
+var puede_caer = false  # Variable para controlar el inicio de la caída
 
-# Called when the node enters the scene tree for the first time.
+# Se ejecuta cuando el nodo entra en la escena
 func _ready() -> void:
-	print("me CREO")
-	#detecto la dirección a la que va a ir la flecha
-	if(position.y <= 0):
+	await get_tree().create_timer(2.0).timeout  
+	puede_caer = true  # Activa la caída
+
+	# Detecta la dirección a la que va a ir la flecha
+	if position.y <= 0:
 		down = true
-		gravity *= -1
-		
-	
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# Se ejecuta en cada frame
 func _process(delta: float) -> void:
-	if(down):
-		position.y += 1 * SPEED
-		if(position.y >= 2000):
-			print("me destruyo")
-			queue_free()
+	if puede_caer:  # Solo se moverá si han pasado los 6 segundos
+		if down:
+			position.y += 1 * SPEED
+			if position.y >= 2000:
+				print("me destruyo")
+				queue_free()
 		else:
-			pass
-	else:
-		position.y -= 1 * SPEED
-		if(position.y <= -250.0):
-			print("me destruyo")
-			queue_free()
-		else:
-			pass
-		
-	
-	#move_and_slide()
+			position.y -= 1 * SPEED
+			if position.y <= -250.0:
+				print("me destruyo")
+				queue_free()
 
-# Called when the arrow leave the camera
+# Cuando la garra colisiona con otro objeto
 func _on_body_entered(body: Node2D) -> void:
 	print("chocolate")
-	#queue_free()
-	pass
