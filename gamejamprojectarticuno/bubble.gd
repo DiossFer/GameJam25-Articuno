@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 	var direction_x := Input.get_axis("ui_left", "ui_right") # cuando se mueve de izquierda a derecha
 	if direction_x: 
 		velocity.x = direction_x * SPEED # movereme en la dirección a la velocidad
-		cambiar_animacion("burbuja_movimiento2")
+		cambiar_animacion("burbuja_movimiento")
 		
 		if velocity.x < 0:
 			$Sprite2D3.flip_h = true # animacion que voltea el sprite
