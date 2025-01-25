@@ -20,18 +20,23 @@ func _process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right") # cuando se mueve de izquierda a derecha
-	if direction: 
-		velocity.x = direction * SPEED # movereme en la dirección a la velocidad
+	var direction_x := Input.get_axis("ui_left", "ui_right") # cuando se mueve de izquierda a derecha
+	if direction_x: 
+		velocity.x = direction_x * SPEED # movereme en la dirección a la velocidad
 		
 		if velocity.x < 0:
-			$Sprite2D.flip_h = true # animacion que voltea el sprite
+			$Sprite2D3.flip_h = true # animacion que voltea el sprite
 		else:
-			$Sprite2D.flip_h = false
+			$Sprite2D3.flip_h = false
 	else:
 		velocity.x = 0 # animacion de parada
 		cambiar_animacion("idle")
-
+		
+	#salto en el aire comentado
+	#var direction_y := Input.get_axis("ui_up", "ui_down")
+	#if direction_y:
+		#velocity.y = direction_y * SPEED
+	
 
 	move_and_slide() 
 	

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn3hac6mn2n6e"]
+
+[ext_resource type="Texture2D" uid="uid://d0c0becbvs46" path="res://Assets/Backgrounds/Mapa jungla.png" id="1_vhyym"]
+[ext_resource type="Texture2D" uid="uid://drdekfexyxldh" path="res://Assets/Prueba/base.png" id="2_70eny"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y04yq"]
+size = Vector2(180, 24)
+
+[node name="Jungle" type="Node2D"]
+position = Vector2(7, -1)
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(570, 325)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_vhyym")
+
+[node name="Camera2D" type="Camera2D" parent="background"]
+position = Vector2(0, 1)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(515, 340)
+scale = Vector2(0.25, 0.25)
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(2, -8)
+shape = SubResource("RectangleShape2D_y04yq")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("2_70eny")
