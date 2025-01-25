@@ -57,5 +57,5 @@ position = Vector2(1317.75, 680.5)
 scale = Vector2(0.6, 0.6)
 
 [node name="Flecha" parent="." instance=ExtResource("4_058in")]
-position = Vector2(-217, 374)
+position = Vector2(-253, 178)
 scale = Vector2(0.4, 0.4)

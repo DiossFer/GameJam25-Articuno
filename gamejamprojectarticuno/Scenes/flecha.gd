@@ -1,27 +1,30 @@
 extends Area2D
 
 const SPEED = 5.0 #constante que indica la velocidad de la flecha
-var up = false #variable para indicar la dirección de la flecha, indica que va hacia arriba
-var down = false #variable para indicar la dirección de la flecha, indica que va hacia abajo
+var left = false #variable para indicar la dirección de la flecha, indica que va hacia izquierda
+var right = false #variable para indicar la dirección de la flecha, indica que va hacia derecha
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("me CREO")
 	#detecto la dirección a la que va a ir la flecha
-	if(position.y <= 0):
-		down = true
-		gravity *= -1
+	if(position.x <= 0):
+		print("comprobando hacia donde voy")
+		right = true
+		left = false
+		#gravity *= -1
 		
 	else:
-		up = true
-		gravity *= 1
+		left = true
+		right = false
+		#gravity *= 1
 		#Darle la vuelta al sprite si va en dirección contraria
 		$Sprite2D.flip_h = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if(down):
+	if(right):
 		position.x += 1 * SPEED
 		if(position.x >= 2000):
 			print("me destruyo")
@@ -30,7 +33,7 @@ func _process(delta: float) -> void:
 			pass
 	else:
 		position.x -= 1 * SPEED
-		if(position.x <= -250.0):
+		if(position.x <= -9000.0):
 			print("me destruyo")
 			queue_free()
 		else:
