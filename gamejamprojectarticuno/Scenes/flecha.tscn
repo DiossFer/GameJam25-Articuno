@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dt1qown7jeisf"]
+[gd_scene load_steps=4 format=3 uid="uid://daifnykmvega2"]
 
 [ext_resource type="Script" path="res://Scenes/flecha.gd" id="1_f423h"]
-[ext_resource type="Texture2D" uid="uid://dfpvdyhmostu2" path="res://Assets/Prueba/enemy.png" id="2_mkkyf"]
+[ext_resource type="Texture2D" uid="uid://b5jqq7g46er0u" path="res://Assets/Prueba/enemy.png" id="2_mkkyf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fp68a"]
 size = Vector2(168, 171)
