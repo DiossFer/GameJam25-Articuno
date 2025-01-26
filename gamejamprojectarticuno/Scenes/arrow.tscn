@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b56npae02tku3"]
+
+[ext_resource type="Script" path="res://Scripts/flecha.gd" id="1_f423h"]
+[ext_resource type="Texture2D" uid="uid://dctomilorxjxo" path="res://Assets/Sprites/Enemies/Flecha.png" id="2_jvrxf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fp68a"]
+size = Vector2(185, 22)
+
+[node name="Flecha" type="Area2D"]
+position = Vector2(184, -11)
+gravity_space_override = 1
+script = ExtResource("1_f423h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(290, 188)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("2_jvrxf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(289.5, 187)
+shape = SubResource("RectangleShape2D_fp68a")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

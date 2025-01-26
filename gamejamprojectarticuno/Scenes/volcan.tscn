@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://ciwl1sn31i5ao"]
+
+[ext_resource type="Script" path="res://Scripts/volcan.gd" id="1_n10eq"]
+[ext_resource type="Texture2D" uid="uid://rarhhn30i4e" path="res://Assets/Backgrounds/Mapa lava.png" id="2_tmew8"]
+[ext_resource type="PackedScene" uid="uid://c2317i65e0v68" path="res://Scenes/Bubble.tscn" id="3_a60js"]
+[ext_resource type="Texture2D" uid="uid://cexja4iw5jh1k" path="res://Assets/Sprites/Platforms/Plataforma lava.png" id="3_j6cvx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y04yq"]
+size = Vector2(142.857, 24)
+
+[node name="volcan" type="Node2D"]
+position = Vector2(7, -1)
+script = ExtResource("1_n10eq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = 1.0
+offset_right = 1913.0
+offset_bottom = 1081.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tmew8")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+
+[node name="platform1" type="RigidBody2D" parent="."]
+position = Vector2(1057, 880)
+scale = Vector2(0.07, 0.07)
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform1"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_y04yq")
+
+[node name="Sprite2D" type="Sprite2D" parent="platform1"]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("3_j6cvx")
+
+[node name="platform2" type="RigidBody2D" parent="."]
+position = Vector2(566, 519)
+scale = Vector2(0.07, 0.07)
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform2"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_y04yq")
+
+[node name="Sprite2D" type="Sprite2D" parent="platform2"]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("3_j6cvx")
+
+[node name="platform3" type="RigidBody2D" parent="."]
+position = Vector2(1676, 574)
+scale = Vector2(0.07, 0.07)
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform3"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_y04yq")
+
+[node name="Sprite2D" type="Sprite2D" parent="platform3"]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("3_j6cvx")
+
+[node name="Burbuja" parent="." instance=ExtResource("3_a60js")]
+position = Vector2(1145, 782)
+scale = Vector2(0.6, 0.6)

@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://bg13k28282mdm"]
+
+[ext_resource type="Texture2D" uid="uid://cyvmvs67i3hbr" path="res://Assets/Sprites/red.png" id="1_4g7e7"]
+[ext_resource type="Script" path="res://Scripts/sprite_2d.gd" id="2_wl8eo"]
+[ext_resource type="Script" path="res://Scripts/zarpazo_serio.gd" id="3_o06vj"]
+[ext_resource type="Texture2D" uid="uid://dl0htqyn12td3" path="res://Assets/Sprites/Enemies/Hacha.png" id="4_r7ysm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iycg4"]
+size = Vector2(207, 159)
+
+[node name="AvisoZarpazo" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(100, 327)
+scale = Vector2(0.773077, 2.33214)
+texture = ExtResource("1_4g7e7")
+script = ExtResource("2_wl8eo")
+
+[node name="ZarpazoSerio" type="Area2D" parent="."]
+script = ExtResource("3_o06vj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZarpazoSerio"]
+position = Vector2(100, -83)
+shape = SubResource("RectangleShape2D_iycg4")
+
+[node name="Sprite2D" type="Sprite2D" parent="ZarpazoSerio"]
+position = Vector2(95, -69)
+scale = Vector2(0.175124, 0.155447)
+texture = ExtResource("4_r7ysm")
+
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
+[connection signal="body_entered" from="ZarpazoSerio" to="ZarpazoSerio" method="_on_body_entered"]
