@@ -1,7 +1,44 @@
-[gd_scene format=3 uid="uid://ce4xcwnurmhub"]
+[gd_scene load_steps=6 format=3 uid="uid://ce4xcwnurmhub"]
+
+[ext_resource type="Texture2D" uid="uid://b2o82vyx3xxde" path="res://Assets/Sprites/movimiento_burbuja_lado_serio (1).png" id="1_b4aih"]
+[ext_resource type="Texture2D" uid="uid://eex01canmock" path="res://Assets/Backgrounds/fondoMenu2.png" id="1_j2mjr"]
+[ext_resource type="Texture2D" uid="uid://tcd7qi12b264" path="res://Assets/Sprites/Parriba_pabajo_burbuja_serio.png" id="2_4yvhk"]
+[ext_resource type="Texture2D" uid="uid://bj7d1fc65kx87" path="res://Assets/Sprites/arriba_abajo_burbuja_seria.jpg" id="4_acj5a"]
+[ext_resource type="Script" path="res://Scenes/atras_controles.gd" id="5_q0j62"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(1045.75, 727.25)
+scale = Vector2(0.565234, 0.692361)
+texture = ExtResource("1_j2mjr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(453, 545)
+scale = Vector2(0.61, 0.643333)
+texture = ExtResource("1_b4aih")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1136, 372)
+scale = Vector2(0.25652, 0.253945)
+texture = ExtResource("2_4yvhk")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1125, 678)
+scale = Vector2(0.212204, 0.193237)
+texture = ExtResource("4_acj5a")
+
+[node name="Atras_controles" type="Button" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 11.0
+offset_right = 67.0
+offset_bottom = 48.0
+text = "Title screen"
+script = ExtResource("5_q0j62")
+
+[connection signal="pressed" from="Atras_controles" to="Atras_controles" method="_on_pressed"]
