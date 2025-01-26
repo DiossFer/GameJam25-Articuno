@@ -142,7 +142,7 @@ func actualizar_mapa ():
 	elif (nivel==4):
 		mapa="cyberpunk"
 
-	
+
 
 func obtener_skin ():
 	if (skin=="Default"):
@@ -167,3 +167,7 @@ func actualizar_skin ():
 func actualizar_interfaz ():
 	$"HBoxContainer/VBoxContainer/HBoxContainer/mapa".text = mapa
 	pass#TODO
+
+
+func _on_exit_pressed() -> void:
+	get_tree().quit()
