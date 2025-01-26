@@ -7,7 +7,8 @@ const JUMP_VELOCITY = -400.0
 var anim_actual = null # variable de animacion cuando esta quieta la burbuja declarada
 
 func damage():
-	print("SEEEEEEEEXOOOOOOOOOOO")
+	#print("como daño") #TODO animación muerte
+	pass
 
 func _process(delta: float) -> void:
 	if not is_on_floor(): 

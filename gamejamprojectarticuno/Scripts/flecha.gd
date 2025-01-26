@@ -50,7 +50,8 @@ func _process(delta: float) -> void:
 
 # Called when the arrow leave the camera
 func _on_body_entered(body: Node2D) -> void:
-	#print("chocolate")
 	if(body.name == "Burbuja"):
 		body.damage()
+		get_parent().defeat()
+		
 	pass
