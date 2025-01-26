@@ -20,14 +20,17 @@ func _process(delta: float) -> void:
 		if down:
 			position.y += 1 * SPEED
 			if position.y >= 2000:
-				print("me destruyo")
+				#print("me destruyo")
 				queue_free()
 		else:
 			position.y -= 1 * SPEED
 			if position.y <= -250.0:
-				print("me destruyo")
+				#print("me destruyo")
 				queue_free()
 
 # Cuando la garra colisiona con otro objeto
 func _on_body_entered(body: Node2D) -> void:
-	print("chocolate")
+	#print("chocolate")
+	if(body.name == "Burbuja"):
+		body.damage()
+	pass

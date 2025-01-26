@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgrfa22ybg6kk"
-path="res://.godot/imported/bubble.png-c1ef7e9d2b96cea69e70fc096e2894d3.ctex"
+uid="uid://blsfr3d3weslt"
+path="res://.godot/imported/Dardo.png-2a6ad589069cde1cdd59b729f687d6e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prueba/bubble.png"
-dest_files=["res://.godot/imported/bubble.png-c1ef7e9d2b96cea69e70fc096e2894d3.ctex"]
+source_file="res://Assets/Sprites/Enemies/Dardo.png"
+dest_files=["res://.godot/imported/Dardo.png-2a6ad589069cde1cdd59b729f687d6e0.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drdekfexyxldh"
-path="res://.godot/imported/base.png-14f508c824de10c546b1e09d5034a2e3.ctex"
+uid="uid://dctomilorxjxo"
+path="res://.godot/imported/Flecha.png-7b27676b99387f4503cae13e0cd4e542.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prueba/base.png"
-dest_files=["res://.godot/imported/base.png-14f508c824de10c546b1e09d5034a2e3.ctex"]
+source_file="res://Assets/Sprites/Enemies/Flecha.png"
+dest_files=["res://.godot/imported/Flecha.png-7b27676b99387f4503cae13e0cd4e542.ctex"]
 
 [params]
 

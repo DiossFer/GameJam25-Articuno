@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3urycsq5f10c"
-path="res://.godot/imported/danger-symbol-triangle-on-transparent-260nw-1335676049.webp-2618a6e544606cc1a4b81277528aa7e9.ctex"
+uid="uid://dxg8lhrqc3t8b"
+path="res://.godot/imported/Plataforma artico.png-9fac7e1042ce3cb463463d9ae890a969.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prueba/danger-symbol-triangle-on-transparent-260nw-1335676049.webp"
-dest_files=["res://.godot/imported/danger-symbol-triangle-on-transparent-260nw-1335676049.webp-2618a6e544606cc1a4b81277528aa7e9.ctex"]
+source_file="res://Assets/Sprites/Platforms/Plataforma artico.png"
+dest_files=["res://.godot/imported/Plataforma artico.png-9fac7e1042ce3cb463463d9ae890a969.ctex"]
 
 [params]
 

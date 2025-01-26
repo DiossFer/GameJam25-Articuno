@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tykc7dfcjeng"
-path="res://.godot/imported/flecha.png-2d07ab8e210654ad8f4f766bcf2b9bc2.ctex"
+uid="uid://dl0htqyn12td3"
+path="res://.godot/imported/Hacha.png-54e55a2997b4853f79f6c51c11982bbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prueba/flecha.png"
-dest_files=["res://.godot/imported/flecha.png-2d07ab8e210654ad8f4f766bcf2b9bc2.ctex"]
+source_file="res://Assets/Sprites/Enemies/Hacha.png"
+dest_files=["res://.godot/imported/Hacha.png-54e55a2997b4853f79f6c51c11982bbe.ctex"]
 
 [params]
 

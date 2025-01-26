@@ -5,7 +5,8 @@ var left = false #variable para indicar la dirección de la flecha, indica que v
 
 func setDirection(direction):
 	left = direction
-	if(direction):
+	if(left == true):
+		#print("le doy la vuelta al dardo")
 		#Darle la vuelta al sprite si va en dirección contraria
 		$Sprite2D.flip_h = true
 
@@ -22,7 +23,7 @@ func _ready() -> void:
 		left = true
 		#gravity *= 1
 		#Darle la vuelta al sprite si va en dirección contraria
-		$Sprite2D.flip_h = true
+		#$Sprite2D.flip_h = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -50,5 +51,6 @@ func _process(delta: float) -> void:
 # Called when the arrow leave the camera
 func _on_body_entered(body: Node2D) -> void:
 	#print("chocolate")
-	#queue_free()
+	if(body.name == "Burbuja"):
+		body.damage()
 	pass
