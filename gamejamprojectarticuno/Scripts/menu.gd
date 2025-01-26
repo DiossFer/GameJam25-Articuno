@@ -78,15 +78,18 @@ func _on_left_b_level_pressed() -> void:
 
 
 func _on_controls_pressed() -> void:
-	pass # Controls Scene #TODO
+	get_tree().change_scene_to_file("res://Scenes/menuControles.tscn")
 
 
 func _on_options_pressed() -> void:
-	pass # Options Scene #TODO
+	get_tree().change_scene_to_file("res://Scenes/menuConfig.tscn")
 
 
 func _on_play_pressed() -> void:
-	pass # Game Scene #TODO
+	
+	var ruta = "res://Scenes/"+str($HBoxContainer/VBoxContainer/HBoxContainer/mapa.text)+".tscn"
+	print(ruta)
+	get_tree().change_scene_to_file(ruta)
 
 func save_settings():
 	var config = ConfigFile.new()
@@ -112,15 +115,15 @@ func obtener_nivel () -> int:
 	
 	var num = 0
 	
-	if (mapa=="Jungla"):
+	if (mapa=="jungle"):
 		num=0
-	elif (mapa=="Edad de hielo"):
+	elif (mapa=="ice"):
 		num=1
-	elif (mapa=="Volcan"):
+	elif (mapa=="volcan"):
 		num=2
-	elif (mapa=="Edad media"):
+	elif (mapa=="medieval"):
 		num=3
-	elif (mapa=="Cyberpunk"):
+	elif (mapa=="cyberpunk"):
 		num=4
 	
 	return num
@@ -129,15 +132,15 @@ func obtener_nivel () -> int:
 
 func actualizar_mapa ():	
 	if (nivel==0):
-		mapa="Jungla"
+		mapa="jungle"
 	elif (nivel==1):
-		mapa="Edad de hielo"
+		mapa="ice"
 	elif (nivel==2):
-		mapa="Volcan"
+		mapa="volcan"
 	elif (nivel==3):
-		mapa="Edad media"
+		mapa="medieval"
 	elif (nivel==4):
-		mapa="Cyberpunk"
+		mapa="cyberpunk"
 
 	
 
