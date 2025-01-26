@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://f4v8e38jqibx"]
 
 [ext_resource type="Texture2D" uid="uid://eex01canmock" path="res://Assets/Backgrounds/fondoMenu2.png" id="1_seyhj"]
-[ext_resource type="Script" path="res://Scenes/menu_config.gd" id="1_uu728"]
+[ext_resource type="Script" path="res://Scripts/menu_config.gd" id="1_uu728"]
 [ext_resource type="Texture2D" uid="uid://dugalik005hu5" path="res://Assets/Sprites/Pompa mov (1).png" id="2_5axas"]
 [ext_resource type="Texture2D" uid="uid://dxg8lhrqc3t8b" path="res://Assets/Sprites/Platforms/Plataforma artico.png" id="3_5jw1m"]
 [ext_resource type="Texture2D" uid="uid://dctomilorxjxo" path="res://Assets/Sprites/Enemies/Flecha.png" id="3_pamjn"]
@@ -52,6 +52,10 @@ text = "Volumnen: on"
 layout_mode = 2
 text = "Title Screen"
 
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(-1285, 847)
 scale = Vector2(0.510793, 0.380093)
@@ -59,6 +63,11 @@ texture = ExtResource("2_5axas")
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
 position = Vector2(957, 345)
+scale = Vector2(0.420161, 0.180533)
+texture = ExtResource("3_5jw1m")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(958, 563)
 scale = Vector2(0.420161, 0.180533)
 texture = ExtResource("3_5jw1m")
 
@@ -79,3 +88,4 @@ texture = ExtResource("5_rrt7x")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
