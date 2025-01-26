@@ -54,6 +54,10 @@ text = "Options"
 layout_mode = 2
 text = "Controls"
 
+[node name="Exit" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
@@ -75,8 +79,8 @@ layout_mode = 2
 size_flags_horizontal = 10
 
 [node name="CharacterSkin" type="Sprite2D" parent="HBoxContainer/VBoxContainer2"]
-position = Vector2(53.5, 55)
-scale = Vector2(0.211, 0.22)
+position = Vector2(55, 71.5)
+scale = Vector2(0.22612, 0.234537)
 texture = ExtResource("1_qj2ld")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer2"]
@@ -99,6 +103,7 @@ text = ">"
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/leftBLevel" to="." method="_on_left_b_level_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/rightBLevel" to="." method="_on_right_b_level_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer2/HBoxContainer/leftBSkin" to="." method="_on_left_b_skin_pressed"]
