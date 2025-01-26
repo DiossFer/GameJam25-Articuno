@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cvn5nyfajkvo7"]
 
-[ext_resource type="Texture2D" uid="uid://d3urycsq5f10c" path="res://Assets/Prueba/danger-symbol-triangle-on-transparent-260nw-1335676049.webp" id="2_ubmkf"]
+[ext_resource type="Texture2D" uid="uid://cyvmvs67i3hbr" path="res://Assets/Sprites/red.png" id="1_4g7e7"]
 [ext_resource type="Script" path="res://Scripts/sprite_2d.gd" id="2_wl8eo"]
 [ext_resource type="Script" path="res://Scripts/zarpazo_serio.gd" id="3_o06vj"]
 [ext_resource type="Texture2D" uid="uid://bcjlmmbttps2k" path="res://Assets/Sprites/Garra_tigre.png" id="4_gy7o6"]
@@ -13,7 +13,7 @@ size = Vector2(207, 159)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(100, 327)
 scale = Vector2(0.773077, 2.33214)
-texture = ExtResource("2_ubmkf")
+texture = ExtResource("1_4g7e7")
 script = ExtResource("2_wl8eo")
 
 [node name="ZarpazoSerio" type="Area2D" parent="."]
@@ -29,3 +29,4 @@ scale = Vector2(0.175124, 0.155447)
 texture = ExtResource("4_gy7o6")
 
 [connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
+[connection signal="body_entered" from="ZarpazoSerio" to="ZarpazoSerio" method="_on_body_entered"]

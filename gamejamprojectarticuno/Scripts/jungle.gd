@@ -23,12 +23,12 @@ func generateFlecha(v : Vector2, direction):
 	flecha_instance.setDirection(direction)
 	
 func generateZarpazo(v : Vector2):
-	print("PREPARANDO EL ZARPAZO")
+	#print("PREPARANDO EL ZARPAZO")
 	var zarpazo = load("res://Scenes/zarpazo.tscn")
 	var zarpazo_instance = zarpazo.instantiate()
 	add_child(zarpazo_instance)
 	zarpazo_instance.position = v
-	print("quiero piza !vegana seria")
+	#print("quiero piza !vegana seria")
 	
 func generateYPosition(x_position, direction):
 	#print("generando posición")
@@ -56,14 +56,13 @@ func _process(delta: float) -> void:
 		generateYPosition(X_POSITION1, false)
 		generateYPosition(X_POSITION2, true)
 		generateYPosition(X_POSITION2, true)
-		generateXPosition(Y_POSITION)
 		
 		
 	time_out += delta
 	if((prox_spawn - time_out) < 0.0):
 		time_out = 0.0
-		prox_spawn = randf_range(15.0, 30.0)
-		print("generando zarpa")
+		prox_spawn = randf_range(10.0, 20.0)
+		#print("generando zarpa")
 		generateXPosition(Y_POSITION)
 		
 	pass

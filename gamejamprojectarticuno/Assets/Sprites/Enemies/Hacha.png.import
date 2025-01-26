@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgrfa22ybg6kk"
-path="res://.godot/imported/bubble.png-c1ef7e9d2b96cea69e70fc096e2894d3.ctex"
+uid="uid://dl0htqyn12td3"
+path="res://.godot/imported/Hacha.png-54e55a2997b4853f79f6c51c11982bbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prueba/bubble.png"
-dest_files=["res://.godot/imported/bubble.png-c1ef7e9d2b96cea69e70fc096e2894d3.ctex"]
+source_file="res://Assets/Sprites/Enemies/Hacha.png"
+dest_files=["res://.godot/imported/Hacha.png-54e55a2997b4853f79f6c51c11982bbe.ctex"]
 
 [params]
 

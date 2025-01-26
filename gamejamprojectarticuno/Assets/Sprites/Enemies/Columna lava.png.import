@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chbrx4u7r5yi"
-valid=false
+uid="uid://bw6vkvhi6txwe"
+path="res://.godot/imported/Columna lava.png-26dbe824b113bbca3fa3639100af9220.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/Process/pruebaFondo2.png"
+source_file="res://Assets/Sprites/Enemies/Columna lava.png"
+dest_files=["res://.godot/imported/Columna lava.png-26dbe824b113bbca3fa3639100af9220.ctex"]
 
 [params]
 

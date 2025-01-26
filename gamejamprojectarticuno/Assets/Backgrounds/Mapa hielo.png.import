@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4vvy81c84gpl"
-valid=false
+uid="uid://dxqvxm68gwg7h"
+path="res://.godot/imported/Mapa hielo.png-d7dc594d750b3b902936524c5ef1ad8d.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/Prueba/depositphotos_4939636-stock-photo-close-picture-dog-paw-great.jpg"
+source_file="res://Assets/Backgrounds/Mapa hielo.png"
+dest_files=["res://.godot/imported/Mapa hielo.png-d7dc594d750b3b902936524c5ef1ad8d.ctex"]
 
 [params]
 

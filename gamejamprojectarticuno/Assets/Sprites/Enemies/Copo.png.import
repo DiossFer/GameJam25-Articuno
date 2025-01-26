@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://myrnck6yvof5"
-path="res://.godot/imported/depositphotos_4939636-stock-photo-close-picture-dog-paw-great.png-45be2094017b6959c12fe31e4b52d8f1.ctex"
+uid="uid://dlivvtthibeik"
+path="res://.godot/imported/Copo.png-bbd55baf441b3c37f929185e4a0acd0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prueba/depositphotos_4939636-stock-photo-close-picture-dog-paw-great.png"
-dest_files=["res://.godot/imported/depositphotos_4939636-stock-photo-close-picture-dog-paw-great.png-45be2094017b6959c12fe31e4b52d8f1.ctex"]
+source_file="res://Assets/Sprites/Enemies/Copo.png"
+dest_files=["res://.godot/imported/Copo.png-bbd55baf441b3c37f929185e4a0acd0e.ctex"]
 
 [params]
 

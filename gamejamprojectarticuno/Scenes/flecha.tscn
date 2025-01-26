@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://dt1qown7jeisf"]
 
 [ext_resource type="Script" path="res://Scripts/flecha.gd" id="1_f423h"]
-[ext_resource type="Texture2D" uid="uid://b5jqq7g46er0u" path="res://Assets/Prueba/enemy.png" id="2_mkkyf"]
+[ext_resource type="Texture2D" uid="uid://blsfr3d3weslt" path="res://Assets/Sprites/Enemies/Dardo.png" id="2_cuad8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fp68a"]
-size = Vector2(168, 171)
+size = Vector2(185, 51)
 
 [node name="Flecha" type="Area2D"]
 position = Vector2(184, -11)
@@ -13,11 +13,11 @@ script = ExtResource("1_f423h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(290, 188)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("2_mkkyf")
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("2_cuad8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(290, 188.5)
+position = Vector2(289.5, 190.5)
 shape = SubResource("RectangleShape2D_fp68a")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

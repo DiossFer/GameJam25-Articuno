@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://01qog05mnyfp"
-path="res://.godot/imported/pruebaPlay.png-427894163a4a2a19bce66cadd1f61140.ctex"
+uid="uid://cexja4iw5jh1k"
+path="res://.godot/imported/Plataforma lava.png-06676febded2868b84068fea8ec989d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prueba/pruebaPlay.png"
-dest_files=["res://.godot/imported/pruebaPlay.png-427894163a4a2a19bce66cadd1f61140.ctex"]
+source_file="res://Assets/Sprites/Platforms/Plataforma lava.png"
+dest_files=["res://.godot/imported/Plataforma lava.png-06676febded2868b84068fea8ec989d8.ctex"]
 
 [params]
 

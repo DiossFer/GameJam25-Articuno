@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tykc7dfcjeng"
-path="res://.godot/imported/flecha.png-2d07ab8e210654ad8f4f766bcf2b9bc2.ctex"
+uid="uid://bjn42vpg25j3r"
+path="res://.godot/imported/Pompa_mov_1.png-3cbef602ec14e20571696eef981de51e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Prueba/flecha.png"
-dest_files=["res://.godot/imported/flecha.png-2d07ab8e210654ad8f4f766bcf2b9bc2.ctex"]
+source_file="res://Assets/Sprites/Pompa_mov_1.png"
+dest_files=["res://.godot/imported/Pompa_mov_1.png-3cbef602ec14e20571696eef981de51e.ctex"]
 
 [params]
 

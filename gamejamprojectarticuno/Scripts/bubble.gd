@@ -4,16 +4,16 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-var anim_actual = "idle" # variable de animacion cuando esta quieta la burbuja declarada
+var anim_actual = null # variable de animacion cuando esta quieta la burbuja declarada
 
+func damage():
+	print("SEEEEEEEEXOOOOOOOOOOO")
 
 func _process(delta: float) -> void:
-	# Add the gravity.
 	if not is_on_floor(): 
 		velocity += get_gravity() * delta/3
 
 
-	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor(): 
 		velocity.y = JUMP_VELOCITY 
 
@@ -28,22 +28,15 @@ func _process(delta: float) -> void:
 			$Sprite2D3.flip_h = false
 	else:
 		velocity.x = 0 # animacion de parada
-		cambiar_animacion("idle")
-		
-	#salto en el aire comentado
+		cambiar_animacion("quieto")
+	
 	var direction_y := Input.get_axis("ui_up", "ui_down")
 	if direction_y:
 		velocity.y = direction_y * SPEED
-	
-
 	move_and_slide() 
 	
-
 # funcion para cambiar de animacion
 func cambiar_animacion(nombre_anim):
 	if nombre_anim != anim_actual:
 		$Sprite2D3/AnimationPlayer.play(nombre_anim)
 		anim_actual = nombre_anim
-		
-	
-	
