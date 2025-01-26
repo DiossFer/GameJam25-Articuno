@@ -166,7 +166,7 @@ func actualizar_skin ():
 
 func actualizar_interfaz ():
 	$"HBoxContainer/VBoxContainer/HBoxContainer/mapa".text = mapa
-	pass#TODO
+	pass
 
 
 func _on_exit_pressed() -> void:

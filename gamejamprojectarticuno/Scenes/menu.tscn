@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://gfmhe305kr7o"]
+[gd_scene load_steps=6 format=3 uid="uid://gfmhe305kr7o"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_0t03q"]
 [ext_resource type="Texture2D" uid="uid://do5n4tuf28ar1" path="res://Assets/Sprites/Pompa0.png" id="1_qj2ld"]
 [ext_resource type="PackedScene" uid="uid://bosxs58l0kwmg" path="res://Scenes/parallax_background.tscn" id="2_f587w"]
 [ext_resource type="Texture2D" uid="uid://eex01canmock" path="res://Assets/Backgrounds/fondoMenu2.png" id="2_yjcf4"]
+[ext_resource type="Texture2D" uid="uid://w2jh8rtwoxpr" path="res://Assets/Sprites/Logo.png" id="5_grrei"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -99,6 +100,11 @@ text = "Default"
 [node name="rightBSkin" type="Button" parent="HBoxContainer/VBoxContainer2/HBoxContainer"]
 layout_mode = 2
 text = ">"
+
+[node name="Logo" type="Sprite2D" parent="HBoxContainer/VBoxContainer2/HBoxContainer"]
+position = Vector2(-202, -370.5)
+scale = Vector2(0.35627, 0.38341)
+texture = ExtResource("5_grrei")
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
