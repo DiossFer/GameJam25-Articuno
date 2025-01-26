@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://eex01canmock" path="res://Assets/Backgrounds/fondoMenu2.png" id="1_j2mjr"]
 [ext_resource type="Texture2D" uid="uid://tcd7qi12b264" path="res://Assets/Sprites/Parriba_pabajo_burbuja_serio.png" id="2_4yvhk"]
 [ext_resource type="Texture2D" uid="uid://bj7d1fc65kx87" path="res://Assets/Sprites/arriba_abajo_burbuja_seria.jpg" id="4_acj5a"]
-[ext_resource type="Script" path="res://Scenes/atras_controles.gd" id="5_q0j62"]
+[ext_resource type="Script" path="res://Scripts/atras_controles.gd" id="5_q0j62"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

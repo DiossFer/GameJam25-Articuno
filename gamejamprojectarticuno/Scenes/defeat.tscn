@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://by4cnvjymdl7k"]
 
-[ext_resource type="Script" path="res://Scenes/defeat.gd" id="1_bw3pq"]
+[ext_resource type="Script" path="res://Scripts/defeat.gd" id="1_bw3pq"]
 [ext_resource type="Texture2D" uid="uid://eex01canmock" path="res://Assets/Backgrounds/fondoMenu2.png" id="1_qs328"]
 [ext_resource type="Texture2D" uid="uid://bcjlmmbttps2k" path="res://Assets/Sprites/Garra_tigre.png" id="2_h8rdu"]
 [ext_resource type="Texture2D" uid="uid://dxg8lhrqc3t8b" path="res://Assets/Sprites/Platforms/Plataforma artico.png" id="3_vwpug"]
@@ -98,3 +98,6 @@ texture = ExtResource("5_qm4aw")
 position = Vector2(251, 217)
 scale = Vector2(0.3, 0.401)
 texture = ExtResource("6_omnob")
+
+[connection signal="pressed" from="VBoxContainer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]
