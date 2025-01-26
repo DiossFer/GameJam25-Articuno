@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://f4v8e38jqibx"]
+[gd_scene load_steps=8 format=3 uid="uid://f4v8e38jqibx"]
 
 [ext_resource type="Texture2D" uid="uid://eex01canmock" path="res://Assets/Backgrounds/fondoMenu2.png" id="1_seyhj"]
+[ext_resource type="Script" path="res://Scenes/menu_config.gd" id="1_uu728"]
+[ext_resource type="Texture2D" uid="uid://dugalik005hu5" path="res://Assets/Sprites/Pompa mov (1).png" id="2_5axas"]
+[ext_resource type="Texture2D" uid="uid://dxg8lhrqc3t8b" path="res://Assets/Sprites/Platforms/Plataforma artico.png" id="3_5jw1m"]
+[ext_resource type="Texture2D" uid="uid://dctomilorxjxo" path="res://Assets/Sprites/Enemies/Flecha.png" id="3_pamjn"]
+[ext_resource type="Texture2D" uid="uid://dlivvtthibeik" path="res://Assets/Sprites/Enemies/Copo.png" id="4_76pym"]
+[ext_resource type="Texture2D" uid="uid://bw6vkvhi6txwe" path="res://Assets/Sprites/Enemies/Columna lava.png" id="5_rrt7x"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,11 +15,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_uu728")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1116, 590)
 scale = Vector2(0.601042, 0.571296)
 texture = ExtResource("1_seyhj")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(68.2148, 92.7715)
+rotation = -1.11855
+scale = Vector2(2.88416, 2.44616)
+skew = 0.0482115
+texture = ExtResource("3_pamjn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -28,11 +42,40 @@ offset_right = 371.5
 offset_bottom = 250.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 80
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Volumnen: on"
 
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Title Screen"
+
 [node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-1285, 847)
+scale = Vector2(0.510793, 0.380093)
+texture = ExtResource("2_5axas")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(957, 345)
+scale = Vector2(0.420161, 0.180533)
+texture = ExtResource("3_5jw1m")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(956, 456)
+scale = Vector2(0.430469, 0.177546)
+texture = ExtResource("3_5jw1m")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(272.75, 200.25)
+scale = Vector2(0.397255, 0.353241)
+texture = ExtResource("4_76pym")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(2048, 1022)
+scale = Vector2(0.876855, 2.01204)
+texture = ExtResource("5_rrt7x")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
