@@ -40,6 +40,10 @@ func generateYPosition(x_position, direction):
 func generateXPosition(y_position):
 	position_random = randf_range(300.0, 1700.0)
 	generateZarpazo(Vector2(position_random, y_position))
+	
+
+func defeat() :
+	get_tree().change_scene_to_file("res://Scenes/defeat.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
